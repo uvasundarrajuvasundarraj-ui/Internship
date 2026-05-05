@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.1s ease; /* Smooth animation */
+}
+</style>
+</head>
+<body>
+
+<button id="btn">Click me</button>
+
+<script>
+let btn = document.getElementById("btn");
+
+btn.addEventListener("click", function() {
+  
+  btn.style.transform = "translateX(-5px)";
+  
+  setTimeout(() => {
+    btn.style.transform = "translateX(5px)";
+  }, 100);
+
+  setTimeout(() => {
+    btn.style.transform = "translateX(0px)";
+  }, 200);
+
+});
+</script>
+
+</body>
+</html>
